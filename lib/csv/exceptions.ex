@@ -45,8 +45,7 @@ defmodule CSV.StrayQuoteError do
     line = options |> Keyword.fetch!(:line)
     field = options |> Keyword.fetch!(:field)
 
-    message = "Stray quote on line " <>
-      Integer.to_string(line) <> " near \""  <> field <> "\""
+    message = "Stray quote on line " <> Integer.to_string(line) <> " near \"" <> field <> "\""
 
     %__MODULE__{
       line: line,
